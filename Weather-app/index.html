@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather app</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <h1>Weather App:</h1>
+    <div class="main-content">
+        <div class="text-field">
+            <input type="text" class="input-field" id="key" placeholder="Enter OpenWeatherMap api key..." autocomplete="off">
+            <hr>
+            <input type="text" class="input-field" id="search" placeholder="Search for your city, country code..." autofocus
+                autocomplete="off">
+            <hr>
+        </div>
+        <button id="submit-btn" class="submit">SUBMIT</button>
+
+        <div id="cards">
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
