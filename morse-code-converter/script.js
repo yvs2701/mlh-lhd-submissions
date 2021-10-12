@@ -47,17 +47,12 @@ input.addEventListener("keyup", () => {
     output.value = _output;
 });
 output.addEventListener("keyup", () => {
-    const _input = output.value.split(" ");
-    var index = -1, ch, _output = "";
-    for (let i = 0; i < _input.length; i++) {
-        ch = _input.charAt(i);
-        if (ch == '\n') {
-            _output += "\n";
-        } else {
-            index = morse.indexOf(ch);
-            if (index !== -1)
-                _output += AlphaNumeric[index];
-        }
-    }
+    const _input = output.value.split(/\s+/);
+    var index = -1, _output = "";
+    _input.forEach(elem => {
+        index = morse.indexOf(elem);
+        if (index !== -1)
+            _output += AlphaNumeric[index];
+    });
     input.value = _output;
 });
